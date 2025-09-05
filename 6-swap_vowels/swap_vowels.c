@@ -20,6 +20,8 @@ int isvowel(char c) {
     return 0;
 }
 
+void swap_vowels(char str1[], char str2[]);
+
 void swap_vowels(char str1[], char str2[]) {
     int i = 0, j = 0;
 
@@ -34,7 +36,14 @@ void swap_vowels(char str1[], char str2[]) {
             j++;
         }
 
-        // Write your code here
+        char c1 = str1[i];
+        char c2 = str2[j];
+        if (c1 != 0 && c2 != 0) {
+            str1[i] = c2;
+            str2[j] = c1;
+            i++;
+            j++;
+        }
     }
 }
 
